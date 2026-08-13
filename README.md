@@ -1,16 +1,3 @@
-That's fine. In fact, **README is one of the remaining required deliverables**, so let's create it now.
-
-Since your API is already working and **7/7 tests pass**, we can build the README around what you've actually implemented rather than inventing anything.
-
-### Step 1 — Create the README
-
-Run:
-
-```powershell
-code README.md
-```
-
-Paste this:
 
 ````markdown
 # Task Management REST API
