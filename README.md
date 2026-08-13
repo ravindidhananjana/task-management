@@ -1,5 +1,4 @@
 
-````markdown
 # Task Management REST API
 
 A role-based Task Management REST API built with Django REST Framework and PostgreSQL.
@@ -375,9 +374,7 @@ The following environment variables are required:
 
 The actual `.env` file is excluded from version control.
 
-## License
-
-This project was developed as part of a Python Developer Intern skill assessment.
+## 
 
 
 
