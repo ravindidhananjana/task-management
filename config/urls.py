@@ -20,6 +20,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from rest_framework.permissions import AllowAny
 
 
 
@@ -28,12 +29,12 @@ urlpatterns = [
 
     path(
         "api/v1/auth/login/",
-        TokenObtainPairView.as_view(),
+        TokenObtainPairView.as_view(permission_classes=[AllowAny]),
         name="token_obtain_pair",
     ),
     path(
         "api/v1/auth/refresh/",
-        TokenRefreshView.as_view(),
+        TokenObtainPairView.as_view(permission_classes=[AllowAny]),
         name="token_refresh",
     ),
 

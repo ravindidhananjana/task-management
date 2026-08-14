@@ -1,7 +1,12 @@
 
+
 # Task Management REST API
 
 A role-based Task Management REST API built with Django REST Framework and PostgreSQL.
+
+## Demo Video
+
+[Task Management API Walkthrough](https://drive.google.com/file/d/1h1dhWCa7dvyNVims20hnlaL4m5kG_eiH/view?usp=sharing)
 
 ## Features
 
@@ -80,8 +85,8 @@ Task Manager/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd Task-Manager
+git clone https://github.com/ravindidhananjana/task-management.git
+cd task-management
 ```
 
 ### 2. Create a virtual environment
@@ -149,7 +154,7 @@ http://127.0.0.1:8000/
 
 ## Authentication
 
-The API uses JWT authentication.
+The API uses JWT authentication through Django REST Framework SimpleJWT.
 
 ### Login
 
@@ -221,13 +226,13 @@ When a Member creates a Task, the Task is automatically assigned to that Member.
 | POST   | `/api/v1/auth/login/`    | Obtain JWT access and refresh tokens    |
 | POST   | `/api/v1/auth/refresh/`  | Refresh an access token                 |
 | POST   | `/api/v1/auth/logout/`   | Logout and invalidate the refresh token |
-| GET    | `/api/v1/projects/`      | List Projects                           |
+| GET    | `/api/v1/projects/`      | List accessible Projects                |
 | POST   | `/api/v1/projects/`      | Create a Project                        |
 | GET    | `/api/v1/projects/{id}/` | Retrieve a Project                      |
 | PATCH  | `/api/v1/projects/{id}/` | Update a Project                        |
 | PUT    | `/api/v1/projects/{id}/` | Replace a Project                       |
 | DELETE | `/api/v1/projects/{id}/` | Delete a Project                        |
-| GET    | `/api/v1/tasks/`         | List Tasks                              |
+| GET    | `/api/v1/tasks/`         | List accessible Tasks                   |
 | POST   | `/api/v1/tasks/`         | Create a Task                           |
 | GET    | `/api/v1/tasks/{id}/`    | Retrieve a Task                         |
 | PATCH  | `/api/v1/tasks/{id}/`    | Update a Task                           |
@@ -273,6 +278,12 @@ Filter by assigned user:
 
 ```text
 GET /api/v1/tasks/?assigned_to=2
+```
+
+Filter by project:
+
+```text
+GET /api/v1/tasks/?project=1
 ```
 
 ### Ordering
@@ -338,6 +349,8 @@ The project currently contains 7 automated tests covering authentication, permis
 Expected result:
 
 ```text
+Found 7 test(s).
+
 Ran 7 tests
 
 OK
@@ -374,9 +387,13 @@ The following environment variables are required:
 
 The actual `.env` file is excluded from version control.
 
-## 
+## Submission
 
+GitHub Repository:
 
+[https://github.com/ravindidhananjana/task-management](https://github.com/ravindidhananjana/task-management)
 
+Demo Video:
 
+[https://drive.google.com/file/d/1h1dhWCa7dvyNVims20hnlaL4m5kG_eiH/view?usp=sharing](https://drive.google.com/file/d/1h1dhWCa7dvyNVims20hnlaL4m5kG_eiH/view?usp=sharing)
 
