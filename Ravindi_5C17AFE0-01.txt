@@ -1,0 +1,42 @@
+Python Developer Intern Skill Assessment
+
+Candidate: Ravindi Gunasekara
+
+Task: Task Management REST API with Django
+
+GitHub Repository:
+https://github.com/ravindidhananjana/task-management
+
+API Endpoints
+
+Method | Endpoint | Description
+
+POST | /api/v1/auth/login/ | Obtain JWT access and refresh tokens
+POST | /api/v1/auth/refresh/ | Refresh JWT access token
+POST | /api/v1/auth/logout/ | Logout and blacklist refresh token
+
+GET | /api/v1/projects/ | List accessible projects
+POST | /api/v1/projects/ | Create a project
+GET | /api/v1/projects/{id}/ | Retrieve a project
+PUT | /api/v1/projects/{id}/ | Replace a project
+PATCH | /api/v1/projects/{id}/ | Update a project
+DELETE | /api/v1/projects/{id}/ | Delete a project
+
+GET | /api/v1/tasks/ | List accessible tasks
+POST | /api/v1/tasks/ | Create a task
+GET | /api/v1/tasks/{id}/ | Retrieve a task
+PUT | /api/v1/tasks/{id}/ | Replace a task
+PATCH | /api/v1/tasks/{id}/ | Update a task
+DELETE | /api/v1/tasks/{id}/ | Soft-delete a task
+
+GET | /api/v1/activity-logs/ | View activity logs
+
+Task List Query Parameters
+
+?page=2
+?search=meeting
+?status=TODO
+?priority=HIGH
+?assigned_to=2
+?ordering=due_date
+?ordering=-created_at
